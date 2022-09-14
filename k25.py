@@ -3,11 +3,19 @@ from stanfordkarel import *
 def main():
   """Karel code goes here"""
   move()
-  Move()
+  move()
   turn_left()
   move()
   move()
   pick_beeper()
+  move()
+  turn_left()
+  move()
+  turn_left()
+  move()
+  turn_left()
+  move()
+  move()
   pass
 
 
