@@ -2,15 +2,15 @@ from stanfordkarel import *
 
 
 class ktools:
- def m(self):
-   """Shorthand for Move"""
-   move()
+   def m(self):
+    """Shorthand for Move"""
+    move()
 
-  def tl(self):
-   """Turn left"""
+   def tl(self):
+    """Turn Left"""
    turn_left() 
 
-def tr(self):
+  def tr(self):
   """Turn Right"""
   self.tl()
   self.tl()
@@ -22,7 +22,7 @@ def tr(self):
     self.tl()
 
     def pick(self):
-      """Pickbeeper""
+      """Pickbeeper"""
       put_beeper()
 
       def put2(self):
@@ -40,7 +40,7 @@ def tr(self):
       self.put()
 
 
-    def h(self):
+       def h(self):
     """Print H using beepers"""
     self.tl()
     self.put5()
@@ -64,6 +64,8 @@ def tr(self):
     self.m()
     self.m()
     self.m()
+
+    
 
 
 def main():
