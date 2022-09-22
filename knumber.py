@@ -1,4 +1,5 @@
 from stanfordkarel import *
+from time import sleep
 
 
 class ktools:
@@ -22,7 +23,7 @@ def tr(self):
     self.tl()
 
     def pick(self):
-      """Pickbeeper""
+      """Pickbeeper"""
       put_beeper()
 
     def put2(self):
@@ -31,7 +32,7 @@ def tr(self):
       self.m()
       self.put()
 
-      def put5(self):
+    def put5(self):
       """Put 5 beepers in a line"""
       self.put2()
       self.m()
@@ -41,7 +42,7 @@ def tr(self):
 
 
     def h(self):
-    """Print H using beepers"""
+     """Print H using beepers"""
     self.tl()
     self.put5()
     self.tf()
@@ -69,12 +70,12 @@ def tr(self):
       """Front is clear"""
       return front_is_clear()
 
-      def fib(self) -> bool:
+    def fib(self) -> bool:
       """Front is Blocked"""
       return not self.fic()
 
-      def ric(self) -> bool:
-      """Right is Clear""
+    def ric(self) -> bool:
+      """Right is Clear"""
       self.tr()
       if self.fic():
         self.tl()
@@ -82,29 +83,70 @@ def tr(self):
       self.tl()
       return False
 
-      def rib(self) -> bool:
-      """Right is Blocked"""
-      return not self.ric()
+    def rib(self) -> bool:
+     """right is block"""
+    return not self.ric()
 
 
-      def mazemove(self):
+    def mazemove(self):
       """Maze Move"""
     if self.fib():
-      self tf.()
+      self.tf()
     else:
       self.m()
-      if self.ric():
+    if self.ric():
       self.tr()
       self.m()
-      if self.ric():
+    if self.ric():
       self.tr()
       self.m()
-    pass 
+    pass
+
+    def mm(self, num):
+      """Move Multiple"""
+      for number in range(0, num)
+      self.m()
+
+
+  def putm(self, num):
+    """Put Multiple"""
+    for i in range(num - 1):
+      self.put()
+      self.m()
+      self.put()
+
+
+      def pickm(self, num):
+        """Pick Multiple"""
+        for _ in range(num - 1):
+          self.pick()
+          self.m()
+          self.pick()
+          
+
+      
       
 
 def main():
     """ Karel code goes here! """
     kt = ktools()
+    kt.tl()
+  kt.mm(5)
+kt.ta()
+kt.putm(5)
+kt.tl()
+kt.mm(2)
+
+
+
+  
+kt.m()
+    kt.tl()
+    kt.m()
+    kt.mazemove()
+    sleep(3)
+
+    kt.m()
     
     pass
 
