@@ -2,16 +2,16 @@ from stanfordkarel import *
 
 
 class ktools:
-   def m(self):
+  def m(self):
     """Shorthand for Move"""
     move()
 
-   def tl(self):
+  def tl(self):
     """Turn Left"""
-   turn_left() 
+    turn_left()
 
   def tr(self):
-  """Turn Right"""
+   """Turn Right"""
   self.tl()
   self.tl()
   self.tl()
@@ -26,13 +26,13 @@ class ktools:
       put_beeper()
 
       def put2(self):
-      """Put 2 beepers in a line"""
+       """Put 2 beepers in a line"""
       self.put()
       self.m()
       self.put()
 
       def put5(self):
-      """Put 5 beepers in a line"""
+       """Put 5 beepers in a line"""
       self.put2()
       self.m()
       self.put2
@@ -40,8 +40,8 @@ class ktools:
       self.put()
 
 
-       def h(self):
-    """Print H using beepers"""
+    def h(self):
+     """Print H using beepers"""
     self.tl()
     self.put5()
     self.tf()
