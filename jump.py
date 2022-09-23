@@ -2,20 +2,20 @@ from stanfordkarel import *
 
 
 def main():
-    """ Karel code goes here! """
-   move()
-   move()
+  """ Karel code goes here! """
+  move()
+  move()
   move()
   turnleft()
   move()
   move()
   move()
-move()
-turnleft()
-turnleft()
-turnleft()
-Move()
-    pass
+  move()
+  turnleft()
+  turnleft()
+  turnleft()
+  move()
+  pass
 
 
 if __name__ == "__main__":
