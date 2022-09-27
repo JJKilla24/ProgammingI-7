@@ -101,19 +101,49 @@ def tr(self):
           self.pick()
           
 
-      
+      def SOB(self):
+        """Standing on Beeper"""
+        return beepers_present()
+        
+
+        def jump(self):
+            """Jump for 510"""
+          while self.fic():
+            self.m()
+            self.tl()
+            while self.rib():
+              self.m()
+            self.tr()
+            self.m()
+            self.tr()
+            while self.fic():
+              self.m()
+              self.tl()
+
+              def find(self):
+                """Find for 515"""
+                while not facing_north():
+                  self.tl()
+                  self.m()
+                  if not self.SOB():
+                    self.tl()
+                    self.m()
+                    self.tl()
+                    self.m()
+                  for _ in range(2):
+                    if not self.SOB():
+                      self.m()
+                      self.tl()
+                      self.m()
+                      
+                  pass
       
 
 def main():
     """ Karel code goes here! """
-    kt = ktools()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.mazemove()
-    sleep(3)
+   
 
-    kt.m()
+    
     
     pass
 
