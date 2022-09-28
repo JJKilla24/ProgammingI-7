@@ -1,4 +1,4 @@
-run_karel_program()from stanfordkarel import *
+from stanfordkarel import *
 
 
 class ktools:
@@ -162,7 +162,14 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
-    
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.tr()
+    kt.m()
+    while kt.SOB():
+      kt.pick()
+      kt.find()
     pass
 
 
