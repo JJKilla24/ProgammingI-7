@@ -3,49 +3,52 @@ from time import sleep
 
 
 class ktools:
- def m(self):
-  """Shorthand for Move"""
-  move()
+  def m(self):
+    """Shorthand for Move"""
+    move()
 
-def tl(self):
-  """Turn left"""
-  turn_left() 
+  def tl(self):
+    """Turn Left"""
+    turn_left()
 
-def tr(self):
-  """Turn Right"""
-  self.tl()
-  self.tl()
-  self.tl()
+  def tr(self):
+    """Turn Right"""
+    self.tl()
+    self.tl()
+    self.tl()
 
   def ta(self):
-    """Turn around"""
+    """Turn Around"""
     self.tl()
     self.tl()
 
-    def pick(self):
-      """Pickbeeper"""
-      put_beeper()
+  def pick(self):
+    """Pick Beeper"""
+    pick_beeper()
 
-    def put2(self):
-      """Put 2 beepers in a line"""
-      self.put()
-      self.m()
-      self.put()
+  def put(self):
+    """Put Beeper"""
+    put_beeper()
 
-    def put5(self):
-      """Put 5 beepers in a line"""
-      self.put2()
-      self.m()
-      self.put2
-      self.m()
-      self.put()
+  def put2(self):
+    """Put 2 beepers in a line"""
+    self.put()
+    self.m()
+    self.put()
 
+  def put5(self):
+    """Put 5 beepers in a line"""
+    self.put2()
+    self.m()
+    self.put2()
+    self.m()
+    self.put()
 
-    def h(self):
-     """Print H using beepers"""
+  def h(self):
+    """Print H using beepers"""
     self.tl()
     self.put5()
-    self.tf()
+    self.tr()
     self.m()
     self.m()
     self.m()
@@ -66,42 +69,41 @@ def tr(self):
     self.m()
     self.m()
 
-    def fic(self) -> bool:
-      """Front is clear"""
-      return front_is_clear()
+  def fic(self) -> bool:
+    """Front is Clear"""
+    return front_is_clear()
 
-    def fib(self) -> bool:
-      """Front is Blocked"""
-      return not self.fic()
+  def fib(self) -> bool:
+    """Front is Blocked"""
+    return not self.fic()
 
-    def ric(self) -> bool:
-      """Right is Clear"""
-      self.tr()
-      if self.fic():
-        self.tl()
-        return True 
+  def ric(self) -> bool:
+    """Right is Clear"""
+    self.tr()
+    if self.fic():
       self.tl()
-      return False
+      return True  # Immediately exit the function
+    self.tl()
+    return False
 
-    def rib(self) -> bool:
-     """right is block"""
+  def rib(self) -> bool:
+    """Right is Blocked"""
     return not self.ric()
 
-
-    def mazemove(self):
-      """Maze Move"""
+  def mazemove(self):
+    """Maze Move"""
     if self.fib():
-      self.tf()
-    else:
+      self.tl()
+    else:  # Otherwise...
       self.m()
-    if self.ric():
-      self.tr()
-      self.m()
-    if self.ric():
-      self.tr()
-      self.m()
-    pass 
-      
+      if self.ric():
+        self.tr()
+        self.m()
+        if self.ric():
+          self.tr()
+          self.m()
+    pass
+
 
 def main():
     """ Karel code goes here! """
@@ -113,6 +115,35 @@ def main():
     sleep(3)
 
     kt.m()
+
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.tl()
+    kt.m()
+
+    kt.mazemove()
+  
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.tl()
+
+    kt.m()
+    kt.mazemove()
+    
+    
     
     pass
 
