@@ -142,6 +142,27 @@ def main():
 
     kt.m()
     kt.mazemove()
+    kt.tl()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.tr()
+    kt.m()
+    kt.m()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.tl()
+    kt.m()
+    kt.mazemove()
+    kt.m()
     
     
     
