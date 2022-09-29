@@ -126,29 +126,7 @@ class ktools:
 def main():
     """ Karel code goes here! """
     kt = ktools()
-    kt.m()
-    kt.tl()
-    kt.m()
-    put_beeper()
-    kt.tl()
-    kt.tl()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.m()
-    kt.m()
-    kt.m()
-    kt.m()
-    kt.tl()
-    kt.m()
-    put_beeper()
-    kt.tl()
-    kt.tl()
-    kt.m()
-    kt.tl()
-    kt.m()
-    kt.m()
-    kt.m()
+    
     pass
 
 
