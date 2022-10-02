@@ -101,12 +101,30 @@ class ktools:
         if self.ric():
           self.tr()
           self.m()
+
+    def h(self):
+      """Print G using beepers"""
+      kt.m()
+      kt.put2()
+      kt.m()
+      kt.tl()
+      kt.m()
+      kt.put()
+      kt.m()
+      kt.tl()
+      kt.m()
+      kt.put()
+      kt.m()
+      kt.tl()
+      kt.m()
+      
     pass
 
 
 def main():
     """ Karel code goes here! """
     kt = ktools()
+    kt.g()
     
     pass
 
