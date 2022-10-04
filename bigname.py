@@ -187,6 +187,28 @@ class ktools:
     self.tr()
     self.m()
     self.put()
+    self.tl()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.tl()
+    self.m()
+    self.tl()
+    self.m()
+    self.put()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.m()
+    self.tr()
+    self.m()
+    self.put()
+    self.tl()
+  
+    
+    
 
 def main():
     """ Karel code goes here! """
