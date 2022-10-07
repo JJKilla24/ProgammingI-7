@@ -130,24 +130,25 @@ class ktools:
     self.tl()
     self.mm(2)
 
-  def zero(self):
-    self.tl()
-    self.putm(5)
-    self.tr()
-    self.m()
-    self.putm(2)
-    self.m()
-    self.tr()
-    self.putm(5)
-    self.tr()
-    self.mm(2)
-    self.tl()
-    self.tl()
-    self.put()
-    self.m()
-    self.put()
-    self.m()
-    self.mm(2)
+  def zero(self, num):
+    for _ in range(0, num):
+      self.tl()
+      self.putm(5)
+      self.tr()
+      self.m()
+      self.putm(2)
+      self.m()
+      self.tr()
+      self.putm(5)
+      self.tr()
+      self.mm(2)
+      self.tl()
+      self.tl()
+      self.put()
+      self.m()
+      self.put()
+      self.m()
+      self.mm(2)
     
     
 
@@ -155,15 +156,9 @@ def main():
     """ Karel code goes here! """
     kt = ktools()
     kt.one()
-    kt.zero()
-    kt.zero()
-    kt.zero()
-    kt.zero()
-    kt.zero()
-    kt.zero()
-    kt.zero()
-    kt.zero()
-    kt.zero()
+    kt.zero(9)
+    
+    
     pass
 
 
