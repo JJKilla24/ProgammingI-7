@@ -2,20 +2,21 @@ import sys
 import random
 import pygame as pg 
 
-text = input("Pick game Difficulty, Easy,Normal,Hard: ")
+text = input("Pick game Difficulty, Slow,Normal,Turbo: ")
+
+#Game:
+pg.init()
+screen = pg.display.set_mode((640, 480))
+pg.display.set_caption("Dodge or Die")
+
+XWING_IMG = pg.Surface((25, 38))
+XWING_IMG.fill((90, 120, 150))
+TIE_IMG = pg.Surface((40, 24))
+TIE_IMG.fill((190, 60, 50))
+BG_COLOR = pg.Color('gray15')
 
 
-if text == "Easy":
-  pg.init()
-  screen = pg.display.set_mode((640, 480))
-  pg.display.set_caption("Dodge or Die")
-
-  XWING_IMG = pg.Surface((25, 38))
-  XWING_IMG.fill((90, 120, 150))
-  TIE_IMG = pg.Surface((40, 24))
-  TIE_IMG.fill((190, 60, 50))
-  BG_COLOR = pg.Color('gray15')
-  def main():
+def main():
     clock = pg.time.Clock()
     # Surfaces/images have a `get_rect` method which 
     # returns a rect with the dimensions of the image.
@@ -54,7 +55,7 @@ if text == "Easy":
         player_rect.x += change_x
         player_rect.y += change_y
         for enemy_rect in enemies:
-            enemy_rect.y += 15
+            enemy_rect.y += 1
             # Collision detection with pygame.Rect.colliderect.
             if player_rect.colliderect(enemy_rect):
               hits = 0
@@ -79,10 +80,8 @@ if text == "Easy":
         pg.display.flip()
         clock.tick(30)
 
-
-
-
-      ame__ == '__main__':
+  
+if __name__ == '__main__':
     main()
     pg.quit()
     sys.exit()
