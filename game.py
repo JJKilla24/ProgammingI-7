@@ -17,8 +17,6 @@ if text == "Normal":
   BG_COLOR = pg.Color('gray15')
   def main():
     clock = pg.time.Clock()
-    # Surfaces/images have a `get_rect` method which 
-    # returns a rect with the dimensions of the image.
     player_rect = XWING_IMG.get_rect()
     player_rect.center = (300, 400)
     change_x = 0
@@ -40,13 +38,11 @@ if text == "Normal":
                     change_x = 0
                 if event.key == pg.K_a and change_x < 0:
                     change_x = 0
-        # Spawn enemies if counter <= 0 then reset it.
         spawn_counter -= 1
         if spawn_counter <= 0:
-            # Append an enemy rect. You can pass the position directly as an argument.
+
             enemies.append(TIE_IMG.get_rect(topleft=(random.randrange(600), 0)))
             spawn_counter = 30
-        # Update player_rect and enemies.
         player_rect.x += change_x
         player_rect.y += change_y
         for enemy_rect in enemies:
@@ -153,8 +149,6 @@ if text == "Fast":
   BG_COLOR = pg.Color('gray15')
   def main():
     clock = pg.time.Clock()
-    # Surfaces/images have a `get_rect` method which 
-    # returns a rect with the dimensions of the image.
     player_rect = XWING_IMG.get_rect()
     player_rect.center = (300, 400)
     change_x = 0
